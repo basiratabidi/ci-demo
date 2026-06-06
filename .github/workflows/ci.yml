@@ -26,8 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest
           pip install -r requirements.txt
-      - run: flake8 app/ --max-line-length=100
-      - run: pytest app/tests/ -v
+      - run: flake8 . --max-line-length=100
+      - run: pytest -m pytest tests/ -v
 
 # ── Job 2: Build & Push ──────────────────────────────
   build-push:
